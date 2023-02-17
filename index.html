@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS try this!</title>
+</head>
+<body>
+    <h1 id="color">Change my Color</h1>    
+    <input type="button" value="Change the color" onclick="changeColor()"><hr>
+    <h2>Age: </h2> 
+    <input id="ageInput" type="text">
+    <input type="button" value="Enter age" onclick="checkAge()">
+    <p id="age" style="color: red"></p>
+    <h2>Enter 2 numbers: </h2>
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+    <input type="button" value="calculate" onclick="calculate()">
+    <p id="product"></p>
+    <p id="quotient"></p>
+    <script>
+        const changeColor = () => {
+            const color = document.getElementById("color");
+            color.style.color = (color.style.color === "black" ? "green" : "black");
+        }
+
+        const checkAge = () => {
+            document.getElementById("age").innerHTML = 
+                (document.getElementById("ageInput").value > 65 ? "Age is greater than 65. You're too old!" : "");
+        }
+
+        const calculate = () => {
+            const n1 = document.getElementById("n1").value;
+            const n2 = document.getElementById("n2").value;
+
+            document.getElementById("product").innerHTML = `${n1 * n2}`;
+            document.getElementById("quotient").innerHTML = `${n1 / n2}`;
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
